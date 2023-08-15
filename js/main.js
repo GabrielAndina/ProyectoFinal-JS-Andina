@@ -1,5 +1,3 @@
-
-// Escuchamos los clics en los botones "Agregar artículo"
 document.addEventListener("DOMContentLoaded", function() {
     const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
     addToCartButtons.forEach(button => {
