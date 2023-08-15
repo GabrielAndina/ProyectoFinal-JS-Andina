@@ -88,10 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
         userForm.addEventListener("submit", function (event) {
             event.preventDefault();
             userForm.style.display = "none";
-            // Aquí podrías enviar los datos del usuario y la compra a tu servidor si lo deseas
-            // Mostrar un mensaje de agradecimiento al usuario
             alert("¡Gracias por tu compra! Esperamos que disfrutes tus productos.");
-            // Limpiar el carrito y actualizar la vista
             cart = [];
             localStorage.removeItem("cart");
             updateCartView();
