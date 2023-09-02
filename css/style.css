@@ -6,24 +6,22 @@
   box-sizing: border-box;
 }
 
-/*CONDICIONALES*/
+/*MODO NORMAL*/
 body {
-  background-image: linear-gradient(rgb(139, 4, 4), rgb(2, 2, 82));
+  background-image: linear-gradient(rgb(149, 178, 210), rgb(2, 2, 82));
 }
 
 header .nav-item {
   background-image: linear-gradient rgb(139, 4, 4), rgb(2, 2, 82);
 }
 header .bg-light-d {
-  background: linear-gradient(to top, transparent, rgb(2, 2, 82));
+  background: linear-gradient(to top, transparent, rgb(16, 16, 114));
 }
 header .navbar-nav {
   --bs-navbar-color: white;
-  --bs-navbar-hover-color: rgb(215, 30, 30);
+  --bs-navbar-hover-color: rgb(237, 226, 31);
 }
-header .navbar-nav .nav-link.active {
-  --bs-navbar-active-color: rgb(215, 30, 30);
-}
+
 
 .textoPrin, footer .TextoDos, main .TextoUno {
     color: white;
@@ -151,24 +149,130 @@ header .navbar-nav .nav-link.active {
     object-fit: cover;
   }
 
-.carrito, .formulario{
+
+.carrito, .formulario {
   text-align: center;
-  width: 40%;
-  margin: 0 auto;
-  height: auto;
+  width: 100%;
   padding: 15px;
   border-radius: 20px;
-  background-color: #D9D9D9;
+  background-color: transparent;
   font-size: 20px;
   font-weight: 600;
-  box-shadow: 0 0 25px black;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   line-height: 30px;
+  margin-bottom: 20px;
+  color: white;
 }
 
-.botonV{
-  background-color: green;
+.botonV {
+  background-color: rgb(45, 203, 45);
   border-radius: 5px;
-  padding: 5px;
-  margin-left: 10px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: white;
 }
 
+.botonV:hover {
+  background-color: rgb(34, 153, 34);
+}
+
+.input-field {
+  width: 25%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  width: 120px;
+  margin-left: 400px;
+}
+
+.remove-btn {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+.product-container {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center; 
+}
+
+.product-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+
+.product-container span {
+  display: block; 
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+
+ /* Estilos iniciales del botón */
+.button-light {
+  background-color: #0b64c2;
+  color: white;
+  transition: background-color 0.3s;
+}
+.button-dark{
+  background-color: black;
+  color: rgb(248, 245, 245);
+  transition: background-color 0.3s;
+}
+/* Estilo cuando se presiona el botón */
+.btn-primary.clicked {
+  background-color: green;
+}
+
+
+/* MODO OSCURO */
+body.dark-mode {
+  background-image: linear-gradient(rgb(43, 42, 42), black);
+}
+
+header.nav-item.dark-mode {
+  background-color: rgb(43, 42, 42) !important;
+}
+header.bg-light-d.dark-mode {
+  background-color: rgb(43, 42, 42) !important;
+}
+header.navbar-nav.dark-mode {
+  --bs-navbar-color: grey !important; 
+  --bs-navbar-hover-color: white !important;
+}
+
+
+/* BOTONES */
+.light-mode-icon{
+  display: inline-block;
+  width: 10%;
+  cursor: pointer;
+}
+.dark-mode-icon{
+  display: none;
+  width: 10%;
+  cursor: pointer;
+}
+.dark-mode .light-mode-icon {
+  display: none;
+}
+.dark-mode .dark-mode-icon {
+  display: inline-block;
+}
